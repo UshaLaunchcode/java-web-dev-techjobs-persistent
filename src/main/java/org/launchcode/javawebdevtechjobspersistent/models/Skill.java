@@ -7,7 +7,7 @@ import javax.validation.constraints.Size;
 @Entity
 public class Skill extends AbstractEntity {
 
-    @NotNull
+    @NotNull(message="Description is required")
     @Size(min =3, message="Location must be at least 3 characters long")
     private String description;
 

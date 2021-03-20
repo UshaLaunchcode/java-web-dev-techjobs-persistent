@@ -6,14 +6,13 @@ select column_name,data_type
  where table_schema = 'techjobs'
  and table_name = 'job';
 
---Job: Column (Datatype):
---id       (int)
---employer (String)
---name     (String)
---skills   (String)
+## Part 2: Test it with SQL
 
---## Part 2: Test it with SQL
+--write a query to list the names of the employers in St. Louis City.
+ select name
+ from employer
+ where location = "St.Louis";
 
---## Part 3: Test it with SQL
+## Part 3: Test it with SQL
 
---## Part 4: Test it with SQL
+## Part 4: Test it with SQL
