@@ -73,9 +73,9 @@ public class HomeController {
         newJob.setSkills(skillObjs);
 
        /* if (result.isEmpty()){
-            model.addAttribute("title", "Invalid  Employer ID: " + employerId);
+            model.addAttribute("title", "Invalid Skill: " + skills);
         }else {
-            Employer employer = (Employer) result.get();*/
+            Skill skill = (Skill) result.get();*/
 
         return "redirect:";
     }
