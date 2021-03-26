@@ -20,6 +20,15 @@ public class Employer extends AbstractEntity {
     @JoinColumn(name = "employer_id")
     private final List<Job> jobs = new ArrayList<>();
 
+    public Employer(@NotBlank(message = "Location is required")
+                    @Size(min = 2, message = "Location must be at least 2 characters long")
+                            String location) {
+        this.location = location;
+    }
+
+    public Employer() {
+    }
+
     public String getLocation() {
         return location;
     }
@@ -28,12 +37,7 @@ public class Employer extends AbstractEntity {
         this.location = location;
     }
 
-    public Employer(@NotBlank(message = "Location is required")
-                    @Size(min = 2, message = "Location must be at least 2 characters long")
-                            String location) {
-        this.location = location;
-    }
-
-    public Employer() {
+    public List<Job> getJobs() {
+        return jobs;
     }
 }
