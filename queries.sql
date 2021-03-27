@@ -18,3 +18,9 @@ select column_name,data_type
 Drop table job;
 
 ## Part 4: Test it with SQL
+
+Select name, description
+from techjobs.skill
+where skill.id in (select skills_id from job_skills where jobs_id is not null)
+order by skill.name ASC;
+

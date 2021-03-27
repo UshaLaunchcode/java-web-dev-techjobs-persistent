@@ -52,7 +52,8 @@ public class HomeController {
                                     @RequestParam(required = false) List<Integer> skills) {
 
         if (errors.hasErrors()) {
-       //     model.addAttribute("title", "Add Job");
+           model.addAttribute("title", "Add Job");
+
             return "add";
         }
 
@@ -64,13 +65,14 @@ public class HomeController {
              newJob.setEmployer(employer);
         }
 
-        Employer employer = (Employer) result.get();
-        newJob.setEmployer(employer);
+        //Employer employer = (Employer) result.get();
+       // newJob.setEmployer(employer);
 
-        jobRepository.save(newJob);
+
 
         List<Skill> skillObjs = (List<Skill>) skillRepository.findAllById(skills);
         newJob.setSkills(skillObjs);
+        jobRepository.save(newJob);
 
        /* if (result.isEmpty()){
             model.addAttribute("title", "Invalid Skill: " + skills);
